@@ -1,0 +1,58 @@
+.venta-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en una nueva línea si no hay suficiente espacio horizontal */
+  justify-content: center; /* Distribuye las tarjetas horizontalmente con espacio entre ellas */
+  align-items: center;
+  color: blue; /* Color azul para el texto */
+  padding: 20px; /* Añade un poco de espacio interno para que las tarjetas se separen del borde del contenedor */
+  gap: 10px;
+}
+
+.card-img-top {
+  width: 100%; /* Asegurarse de que la imagen se ajuste al ancho de la tarjeta */
+  height: auto;
+  border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior de la imagen */
+}
+
+.card-body {
+  padding: 16px; /* Agregar un margen interior al contenido de la tarjeta */
+  flex-grow: 1;
+}
+
+.productos-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.productos-title {
+  font-size: 36px;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.cart {
+  position: fixed;
+  top: 70px; /* Ajustamos la posición vertical del carrito */
+  right: 20px; /* Ajustamos la posición horizontal del carrito */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+ /*border-radius: 50%;*/
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
