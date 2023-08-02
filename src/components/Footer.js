@@ -48,10 +48,10 @@ const Footer = () => {
         
         <div class="footer-icons">
 
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"> <img src="/facebook-logo-0.png" alt="logoFooter" className="logoFooter" /><i class="fa fa-facebook"></i></a>
+          <a href="#"> <img src="/Twitter.png" alt="logoFooter" className="logoFooter" /><i class="fa fa-Twitter"></i></a>
+          <a href="#"> <img src="/Whatsapp.png" alt="logoFooter" className="logoFooter" /><i class="fa fa-Whatsapp"></i></a>
+          <a href="#"> <img src="/mail.png" alt="logoFooter" className="logoFooter" /><i class="fa fa-Mail"></i></a>
 
         </div>
 

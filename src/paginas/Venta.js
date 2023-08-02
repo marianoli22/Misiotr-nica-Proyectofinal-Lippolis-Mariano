@@ -4,9 +4,7 @@ import Cards from "../components/Cards";
 import { Form } from "react-router-dom";
 import Cart from "./Cart";
 
-
 const Venta = () => {
-  
   const salesList = [
     {
       id: 1,
@@ -57,10 +55,11 @@ const Venta = () => {
       price: "95000",
       imageUrl: "/b3d373b22abf63f1115017052464.jpg"
     },
-    
+
   ];
 
   const [cartItems, setCartItems] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const addToCart = (item) => {
     setCartItems([...cartItems, item]);
@@ -69,14 +68,30 @@ const Venta = () => {
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price, 0);
   };
- 
+
+  const filteredSalesList = salesList.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <div className="venta-container">
       <div className="productos-title-container">
         <h2 className="productos-title">Productos</h2>
       </div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Buscar producto..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </div>
       <div className="cards-container">
-        {salesList.map((item) => (
+        {filteredSalesList.map((item) => (
           <Cards
             key={item.id}
             imageSrc={item.imageUrl}
@@ -93,5 +108,6 @@ const Venta = () => {
     </div>
   );
 };
-  
+
 export default Venta;
+
